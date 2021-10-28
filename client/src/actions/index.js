@@ -71,7 +71,9 @@ export const getDetalles = (id) => {
                 payload: data
             })
         } catch (err) {
-            console.log(alert('No existe ese ID de receta '));
+            console.log(err)
+         alert('No existe ese ID de receta ')
+         ;
         }
     }
 }

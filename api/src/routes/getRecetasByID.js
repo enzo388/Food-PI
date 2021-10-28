@@ -24,11 +24,6 @@ router.get('/recipes/:id', async (req, res) => {
             
 
         };
-        if(!id) {
-            return res.status(400).send('El id tiene que ser un numero')
-        }
-
-        
     }
     catch (e) {
         return res.status(400).send({ msg: "Id incorrecto" });

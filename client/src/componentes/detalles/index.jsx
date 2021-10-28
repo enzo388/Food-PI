@@ -11,24 +11,28 @@ export default function Detail() {
     const dispatch = useDispatch();
     const history = useHistory();
     const { id } = useParams();
+    
+    const detail = useSelector((state) => state.detalles);
 
 
     useEffect(() => {
-        dispatch(getDetalles(id))
+        
+            dispatch(getDetalles(id))
+        
+        
 
         return () => {
             dispatch(reloadDetalles())
         }
-    }, [dispatch, id]);
+    }, [dispatch, id, ]);
 
 
 
-    const detail = useSelector((state) => state.detalles);
-    /*  if(!detail[0].nombre){
-         history.push('/home');
-     } */
+   
+   
+  
 
-    console.log(detail)
+    
 
     
 
@@ -54,8 +58,8 @@ export default function Detail() {
                                     <RecipeDetails name="Id" data={detail[0].id} />
                                 </li>
                                 <li><RecipeDetails name="Nombre" data={detail[0].nombre ? detail[0].nombre : detail[0].nombre} /></li>
-                                <li><RecipeDetails name="Dietas" data={Array.isArray(detail[0].dieta) ? detail[0].dieta.map(d => d.name ? <label> {d.name} * </label> :
-                                    <label> {d} * </label>) : detail[0].dieta} /></li>
+                                <li><RecipeDetails name="Dietas" data={Array.isArray(detail[0].dieta) ? detail[0].dieta.map(d => d.name ? <label key={d.name}> {d.name} * </label> :
+                                    <label  key={d}> {d} * </label>) : detail[0].dieta} /></li>
                                 <li className={styles.resumen}><RecipeDetails name="Resumen" data={detail[0].resumen} /></li>
                                 <li><RecipeDetails name="Puntuacion" data={detail[0].puntuacion} /></li>
                                 <li><RecipeDetails name="Nivel de comida saludable" data={detail[0].nivel_de_comida_saludable} /></li>

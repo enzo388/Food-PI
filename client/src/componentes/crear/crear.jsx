@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { getRecetas, postReceta, getDietas } from '../../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
 import Formulario from "../formulario"
-
+import style from "../crear/crear.module.css"
 
 
 
@@ -13,7 +13,7 @@ export default function Crear() {
     const history = useHistory();
     const todasLasDietas = useSelector((state) => state.dietas);
     const allRecipes = useSelector((state) => state.recetas);
-
+    console.log(todasLasDietas)
 
 
 
@@ -31,7 +31,7 @@ export default function Crear() {
     });
 
     useEffect(() => {
-        if(todasLasDietas === 0) {
+        if(todasLasDietas.length === 0) {
             dispatch(getDietas());
         }
         
@@ -44,7 +44,7 @@ export default function Crear() {
     }, [dispatch, allRecipes.length]);
 
     const recipesName = allRecipes.map(el => el.nombre)
-
+  
     const handleSubmit = (e) => {
         e.preventDefault();
         if (input.dieta.length === 0) {
@@ -158,11 +158,12 @@ export default function Crear() {
             dieta: input.dieta.includes(e.target.value) ? input.dieta : [...input.dieta, e.target.value]
         });
     }
-
+//a
     return (
-        <div>
+        <div className={style.mainContainer}>
+            <div className={style.mainForm}>
             <button onClick={handle_button_home}>Volver</button>
-            <form >
+            <form className={style.form}>
                 <Formulario name="nombre" type="text" value={input.nombre} handle_function={handle_input_change} error_control={errors} />
                 <Formulario name="Imagen" type="url" value={input.imagen} handle_function={handle_input_change} error_control={errors} />
                 {/* <Formulario name="Resumen" type="text" value={input.resumen} handle_function={handle_input_change} error_control={errors} /> */}
@@ -210,6 +211,9 @@ export default function Crear() {
                 </div>
                 <button type="submit" onClick={handleSubmit} >Crear Receta</button>
             </form>
+
+            </div>
+           
         </div>
     )
 

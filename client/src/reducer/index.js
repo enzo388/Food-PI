@@ -40,6 +40,7 @@ function reducer(state = initialState, action) {
                 ...state
             }
         case GET_DETALLES:
+            
             return {
                 ...state,
                 detalles: action.payload

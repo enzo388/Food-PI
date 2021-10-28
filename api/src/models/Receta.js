@@ -26,12 +26,8 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT
     },
     imagen:{
-      type: DataTypes.STRING
+      type: DataTypes.TEXT
     },
-    creado: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true,
-      allowNull: false
-    }
+   
   });
 };

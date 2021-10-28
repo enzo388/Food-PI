@@ -30,20 +30,14 @@ async function traer_recetas_api() {
         }
     })
 
-   var x = instructionsmaps2.map(e => {
-        return {
-            pasos: e.passos
-            }
-        
-            
-    }) 
-     x = x.map(e=>{
+   
+    var x = instructionsmaps2.map(e=>{
         return{
             x: Object.values(e)
         }
     })
     var xx= []
-    var y =x.map(e => {
+   x.map(e => {
         xx.push(e.x)
     })
 /* 

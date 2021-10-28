@@ -1,0 +1,92 @@
+.mainContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://www.revistainteriores.es/uploads/s1/71/83/49/cocina.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+   
+    width: 100vw;
+    height: 100vh;
+    
+
+}
+
+.mainForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(9, 18, 20, 0.651);
+    color: rgb(255, 255, 255);
+    width: 80%;
+    padding: 87px 0px 79px;
+    margin-top: 130px;
+    position: absolute;
+}
+    
+.form{
+    display:flex;
+    flex-direction: column;
+    font-size: 21px;
+    width : 300;
+    
+}
+.formLabel label{
+    font-size:large;
+    font-family: 'Roboto' thin  italic;
+    
+}
+
+.removeBtn{
+    background-color: rgba(8, 38, 46, 0.644);
+    color: rgb(236, 230, 230);
+    border-radius: 5px;
+    cursor: pointer;
+    /* padding:10px; */
+    font-size: 14px;
+    /* margin-left: 210px; */
+    border: none;
+}
+
+.removeBtn:hover {
+    background-color: white; 
+    color: rgba(74, 59, 207, 0.644);
+} 
+
+.formBtn {
+    text-decoration: none;
+    background-color: rgba(8, 38, 46, 0.644);
+    color: rgb(236, 230, 230);
+    font-size: 20px;
+    padding: 15px;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.formBtn:hover {
+    background-color: white; 
+    color: rgba(74, 59, 207, 0.644);
+} 
+
+.btn{
+    background-color: rgba(8, 38, 46, 0.644);
+    color: rgb(236, 230, 230);
+    border-radius: 5px;
+    cursor: pointer;
+    /* padding:10px; */
+    font-size: 20px;
+    /* margin-left: 210px; */
+    border: none;
+    
+}
+
+
+.btn:hover {
+    background-color: white; 
+    color: rgba(74, 59, 207, 0.644);
+}

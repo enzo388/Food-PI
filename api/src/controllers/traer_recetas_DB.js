@@ -3,7 +3,7 @@ const { Receta, Dieta } = require('../db');
 async function traer_recetas_BD() {
        try {
            let recetas = await Receta.findAll({
-               attributes: ['id', 'nombre', 'resumen', 'puntuacion', 'nivel_de_comida_saludable', 'paso_a_paso', 'imagen', 'creado', ],
+               attributes: ['id', 'nombre', 'resumen', 'puntuacion', 'nivel_de_comida_saludable', 'paso_a_paso', 'imagen', ],
                include: {
                    model: Dieta,
                    attributes: ['name'],
