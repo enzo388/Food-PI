@@ -1,0 +1,59 @@
+.contenedor{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://i.blogs.es/df050b/istock-1258149399/1366_2000.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 100vw;
+    height: 100vh;
+
+}
+.infoContenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(9, 18, 20, 0.404);
+    color: rgb(255, 255, 255);
+    width: 80%;
+    padding: 76px;
+    margin-top: 64px;
+    list-style: disclosure-closed;
+    border-radius: 8px;
+}
+
+.resumen{
+    text-align: justify;
+}
+
+.loading{
+    font-size: 25px;
+    color: rgb(236, 230, 230);
+
+}
+
+.btn{
+    background-color: rgba(199, 211, 214, 0.644);
+    color: rgb(49, 33, 33);
+    border-radius: 5px;
+    cursor: pointer;
+    /* padding:10px; */
+    font-size: 20px;
+    /* margin-left: 210px; */
+    border: none;
+    
+}
+
+
+.btn:hover {
+    background-color: rgba(138, 136, 136, 0.185); 
+    color: rgb(0, 0, 0);
+} 
+
+.img{
+    width:240px;
+    height:200px;
+    border-radius: 8px;
+
+}
